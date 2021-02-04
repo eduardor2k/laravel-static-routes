@@ -1,0 +1,1 @@
+# laravel-static-routes
