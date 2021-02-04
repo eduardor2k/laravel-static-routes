@@ -35,7 +35,7 @@ class StaticRoutesApache2Command extends Command
      */
     public function handle()
     {
-        $content = $this->view->make('laravel-static-routes.apache2.htaccess', ['routes' => $this->build()]);
+        $content = $this->view->make('laravel-static-routes::apache2.htaccess', ['routes' => $this->build()]);
 
         $filePath = public_path().'/.htaccess';
         if(File::put($filePath, $content)){

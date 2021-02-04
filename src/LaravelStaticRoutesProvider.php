@@ -15,8 +15,8 @@ class LaravelStaticRoutesProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/laravelstaticroutes.php' => config_path('laravelstaticroutes.php'),
             ], 'config');
+            $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-static-routes');
         }
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-static-routes');
     }
 
     /**
