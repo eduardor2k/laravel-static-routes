@@ -1,7 +1,10 @@
 <?php
+
 namespace Eduardor2k\LaravelStaticRoutes;
 
-class LaravelStaticRoutesProvider
+use Illuminate\Support\ServiceProvider;
+
+class LaravelStaticRoutesProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -23,7 +26,7 @@ class LaravelStaticRoutesProvider
         $this->mergeConfigFrom(__DIR__.'/../config/laravelstaticroutes.php', 'laravelstaticroutes');
 
         $this->commands([
-            \Ed\MyCommand::class
+            \Eduardor2k\LaravelStaticRoutes\Commands\StaticRoutesApache2Command::class
         ]);
     }
 }
