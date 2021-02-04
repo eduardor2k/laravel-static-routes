@@ -2,6 +2,8 @@
 
 This laravel package will create an apache 2 .htaccess file in the public directory with all the laravel routes.
 
+***Remember this package is under development, check that everything is still working***
+
 Once installed you only need to run the following command:
 
     php artisan laravel-static-routes:apache-2
