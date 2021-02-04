@@ -5,6 +5,8 @@
 
     RewriteEngine On
 
+    ErrorDocument 404 /404.html
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -21,6 +23,7 @@
     @foreach($routes as $path => $names)
         RewriteRule ^{{ $path }}$ /index.php [L] # route name(s): {{ implode(', ',$names) }}
     @endforeach
+    RewriteRule ^ - [L,R=404]
 
     <Files "index.html">
     Require all denied
