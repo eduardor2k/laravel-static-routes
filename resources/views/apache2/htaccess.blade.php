@@ -23,7 +23,6 @@
     @foreach($routes as $path => $names)
         RewriteRule ^{{ $path }}$ /index.php [L] # route name(s): {{ implode(', ',$names) }}
     @endforeach
-    RewriteRule ^ - [L,R=404]
 
     <Files "index.html">
     Require all denied
