@@ -43,7 +43,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Eduardor2k\\LaravelStaticRoutes\\Tests\\": "tests"
+      "Tests\\": "tests"
     }
   },
   "scripts": {

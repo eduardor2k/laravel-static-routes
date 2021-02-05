@@ -23,13 +23,13 @@ class StaticRoutesApache2Command extends Command
      */
     protected $description = 'Generate .htaccess file in the public folder';
 
-    private ViewFactory $view;
+    private ?ViewFactory $view;
 
-    private Router $router;
+    private ?Router $router;
 
-    private Filesystem $filesystem;
+    private ?Filesystem $filesystem;
 
-    public function __construct(ViewFactory $view, Router $router, Filesystem $filesystem)
+    public function __construct(ViewFactory $view = null, Router $router = null, Filesystem $filesystem = null)
     {
         parent::__construct();
 
