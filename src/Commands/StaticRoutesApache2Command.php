@@ -74,8 +74,8 @@ class StaticRoutesApache2Command extends Command
      */
     protected function replace($uri)
     {
-        $regex = '/\{[a-z:A-Z0-9_\-\?]+\}/';
-        $replacement = '[0-9a-zA-Z]+';
+        $regex = '/\{[a-z:A-Z0-9_\?]+\}/';
+        $replacement = '[0-9a-zA-Z\-]+';
         return preg_replace($regex, $replacement, $uri);
     }
 }
